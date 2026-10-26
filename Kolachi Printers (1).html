@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kolachi Printers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#fff;--surface:#f2f4f5;--ink:#14171a;--muted:#566067;--line:#dde2e5;--c:#0097b8;--m:#d6246e;--y:#ffc400;--cs:rgba(0,151,184,.45);--ms:rgba(214,36,110,.4);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101315;--surface:#181c1f;--ink:#f1f4f5;--muted:#9aa5ab;--line:#2a3237;--c:#2cc3e3;--m:#f0508f;--cs:rgba(44,195,227,.4);--ms:rgba(240,80,143,.35)}}
+:root[data-theme="dark"]{--bg:#101315;--surface:#181c1f;--ink:#f1f4f5;--muted:#9aa5ab;--line:#2a3237;--c:#2cc3e3;--m:#f0508f;--cs:rgba(44,195,227,.4);--ms:rgba(240,80,143,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font:800 20px "Bricolage Grotesque",sans-serif;text-decoration:none}
+.dots{display:grid;grid-template-columns:1fr 1fr;gap:2px}.dots i{width:9px;height:9px;border-radius:50%}
+.dots i:nth-child(1){background:var(--c)}.dots i:nth-child(2){background:var(--m)}.dots i:nth-child(3){background:var(--y)}.dots i:nth-child(4){background:var(--ink)}
+nav{display:flex;gap:20px;font-size:15px}nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+.btn{display:inline-block;border:2px solid var(--ink);background:var(--ink);color:var(--bg);padding:11px 20px;border-radius:8px;font:700 15px "DM Sans",sans-serif;text-decoration:none;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink)}.btn:focus-visible,a:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid var(--c);outline-offset:2px}
+.hero{padding:72px 0 56px}
+.hero h1{font-size:clamp(38px,7vw,72px);font-weight:800;max-width:14ch;text-shadow:3px 2px 0 var(--ms),-3px -2px 0 var(--cs)}
+.hero p{max-width:52ch;color:var(--muted);font-size:18px;margin:22px 0 28px}.hero .row{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:56px 0}section.alt{background:var(--surface)}
+h2{font-size:clamp(28px,4vw,40px);font-weight:800;margin-bottom:10px}.sub{color:var(--muted);max-width:56ch;margin:0 0 30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.tc{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:12px}
+.tc .stage{background:var(--surface);border-radius:6px;padding:14px;display:flex;align-items:center;justify-content:center;height:210px;position:relative}
+.tc .stage .pv{max-height:100%;max-width:100%}.tc h3{font-size:18px}.tc small{color:var(--muted)}
+.tc .meta{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.tag{font:700 12px "DM Sans";padding:3px 9px;border-radius:99px;border:1px solid var(--line)}.tag.pro{background:var(--y);color:#14171a;border-color:var(--y)}
+.lock{position:absolute;inset:0;background:rgba(16,19,21,.35);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+/* template previews */
+.pv{container-type:inline-size;background:#fff;color:#14171a;border:1px solid #cfd5d8;position:relative;overflow:hidden;font-family:"DM Sans",sans-serif;width:100%}
+.pv .n{font:800 8cqw "Bricolage Grotesque",sans-serif;line-height:1.1;overflow-wrap:anywhere}.pv .t{font-size:4cqw;color:#555;margin-top:1cqw}
+.pv .k{position:absolute;left:7cqw;bottom:6cqw;font-size:3.4cqw;line-height:1.5;overflow-wrap:anywhere;right:7cqw}.pv .lb{font-size:3.6cqw;font-weight:700;color:var(--a);margin-bottom:2cqw}
+.pv .ln{display:block;height:1.4cqw;background:#e3e7e9;margin:3cqw 0;border-radius:2px}.pv .ln.s{width:60%}
+.pv.card{aspect-ratio:7/4;padding:7cqw 7cqw 7cqw 10cqw;border-left:4cqw solid var(--a)}.pv.card .ln{display:none}
+.pv.letter{aspect-ratio:1/1.3;padding:0 0 0}.pv.letter .b{background:var(--a);color:#fff;padding:6cqw 7cqw}.pv.letter .t{color:#fff;opacity:.9}.pv.letter .ln{margin:4cqw 7cqw}
+.pv.flyer{aspect-ratio:5/7;background:var(--a);color:#fff;padding:9cqw 8cqw;border:0}.pv.flyer .n{font-size:15cqw}.pv.flyer .t{color:#fff;font-size:6cqw;margin-top:4cqw}.pv.flyer .ln{display:none}
+.pv.invoice{aspect-ratio:1/1.3;padding:7cqw}.pv.invoice .n{font-size:5cqw}.pv.invoice .lb{font:800 11cqw "Bricolage Grotesque";color:var(--a);margin:3cqw 0 4cqw}.pv.invoice .ln{height:3cqw;margin:2.5cqw 0}
+.pv.wedding{aspect-ratio:5/7;padding:8cqw;text-align:center;display:flex;align-items:center;justify-content:center;border:0}
+.pv.wedding::before{content:"";position:absolute;inset:3cqw;border:1cqw double var(--a)}.pv.wedding .n{font:italic 400 10cqw Georgia,serif}.pv.wedding .k{left:0;right:0;text-align:center}.pv.wedding .ln{display:none}
+.pv.banner{aspect-ratio:3/1;background:#14171a;color:#fff;padding:5cqw 6cqw;border:0;border-bottom:2.5cqw solid var(--a)}.pv.banner .n{font-size:9cqw}.pv.banner .t{color:#cfd5d8;font-size:3.6cqw}.pv.banner .k{bottom:5.5cqw;left:auto;right:6cqw;text-align:right;width:auto}.pv.banner .ln{display:none}
+/* editor */
+.editor{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:28px;align-items:start}
+@media(max-width:760px){.editor{grid-template-columns:1fr}nav{gap:12px;font-size:14px}}
+.panel{display:grid;gap:14px}label{display:grid;gap:5px;font-weight:700;font-size:14px}
+input[type=text],input[type=email]{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:16px "DM Sans",sans-serif}
+.sw{display:flex;gap:10px;flex-wrap:wrap}.sw button{width:36px;height:36px;border-radius:50%;border:3px solid var(--bg);box-shadow:0 0 0 2px var(--line);cursor:pointer}.sw button[aria-pressed=true]{box-shadow:0 0 0 3px var(--ink)}
+.prev{background:var(--surface);border-radius:10px;padding:24px;display:flex;justify-content:center}.prev .pv{max-width:460px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.tabs button{border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:7px 14px;border-radius:99px;font:500 14px "DM Sans";cursor:pointer}.tabs button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:760px}
+.plan{border:1px solid var(--line);border-radius:12px;padding:26px;background:var(--bg)}.plan.pro{border:2px solid var(--ink)}
+.price{font:800 44px "Bricolage Grotesque",sans-serif;margin:8px 0}.price small{font:400 16px "DM Sans";color:var(--muted)}
+.plan ul{padding-left:20px;margin:14px 0 22px;color:var(--muted)}.plan li{margin:6px 0}
+.pay{margin-top:28px;border:1px dashed var(--muted);border-radius:12px;padding:24px;max-width:760px}.pay h3{margin-bottom:10px}.pay ol{margin:0 0 16px;padding-left:20px}
+.num{display:inline-flex;gap:10px;align-items:center;flex-wrap:wrap;font:800 26px "Bricolage Grotesque"}
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.cc{border:1px solid var(--line);border-radius:10px;padding:20px;background:var(--bg)}.cc b{display:block;margin-bottom:4px}.cc a{font-weight:700;overflow-wrap:anywhere}
+footer{padding:28px 0;color:var(--muted);border-top:1px solid var(--line);font-size:14px}
+dialog{border:2px solid var(--ink);border-radius:12px;max-width:380px;background:var(--bg);color:var(--ink);padding:26px}dialog::backdrop{background:rgba(0,0,0,.5)}
+dialog h3{margin-bottom:8px}dialog .row{display:flex;gap:10px;margin-top:18px}
+[hidden]{display:none!important}.pv svg{display:block;width:100%;height:auto}.tc .stage .pv{background:none;border:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center}.tc .stage .pv svg{height:100%;width:auto;max-width:100%}.prev .pv{border:0;background:none}
+:root:root:root{--bg:#0b0d12;--surface:#151a26;--ink:#f4f6fb;--muted:#a3abbd;--line:rgba(255,255,255,.11);--c:#22d3ee;--m:#ff3d8b;--y:#ffd23f}
+body{position:relative;overflow-x:hidden}
+.glow{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(600px 400px at 85% -5%,rgba(34,211,238,.22),transparent 70%),radial-gradient(520px 420px at 5% 20%,rgba(255,61,139,.18),transparent 70%),radial-gradient(600px 400px at 60% 105%,rgba(255,210,63,.12),transparent 70%)}
+header{background:rgba(11,13,18,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.logo{gap:12px;font-size:20px;letter-spacing:-.01em}.logo .wm span{font-weight:600;color:var(--muted)}.mark{display:block;border-radius:12px;flex:none}
+nav a{padding:8px 14px;border-radius:99px}nav a:hover{background:rgba(255,255,255,.07)}
+.btn{border:0;border-radius:99px;background:linear-gradient(135deg,var(--c),var(--m));color:#0b0d12;padding:13px 26px}
+.btn.alt{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--line)}
+.btn:disabled{opacity:.7;cursor:default}
+.hero{padding:76px 0 40px}.hero-g{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(40px,6.4vw,78px);letter-spacing:-.025em;max-width:12ch;text-shadow:none}
+.stack{position:relative;height:440px}.stack .pv{position:absolute;border:0;border-radius:18px;background:none;box-shadow:0 28px 70px rgba(0,0,0,.55)}
+.stack .pv:nth-child(1){width:92%;top:0;left:0;transform:rotate(-5deg)}.stack .pv:nth-child(2){width:62%;top:150px;right:0;transform:rotate(4deg)}.stack .pv:nth-child(3){width:34%;bottom:0;left:10%;transform:rotate(-3deg)}
+@media(max-width:860px){.hero-g{grid-template-columns:1fr}.stack{height:360px}}
+section{padding:64px 0}section.alt{background:transparent}h2{font-size:clamp(30px,4.4vw,46px);letter-spacing:-.02em}
+.tc,.plan,.cc,.prev{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:22px}
+.tc .stage{background:rgba(255,255,255,.05);border-radius:16px}
+.plan.pro{border:2px solid transparent;background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gradient(135deg,var(--c),var(--m),var(--y)) border-box}
+.pay{border:1px dashed var(--line);border-radius:22px}
+.tabs button{background:rgba(255,255,255,.05);color:var(--ink)}.tabs button[aria-pressed=true]{background:linear-gradient(135deg,var(--c),var(--m));color:#0b0d12;border-color:transparent}
+input[type=text],input[type=email]{background:rgba(255,255,255,.05);border-radius:12px}
+dialog{background:var(--surface);border:1px solid var(--line);border-radius:22px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.chat-fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:20;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.chat{display:none;position:fixed;right:18px;bottom:calc(82px + env(safe-area-inset-bottom,0px));width:min(380px,calc(100vw - 36px));height:min(560px,calc(100dvh - 130px));flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:22px;z-index:21;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.55)}.chat.open{display:flex}
+.ch{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}.ch small{display:block;color:var(--muted)}.ch .x{background:none;border:0;color:var(--ink);font-size:24px;line-height:1;cursor:pointer;padding:4px 10px}
+.cm{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.b{max-width:86%;padding:10px 14px;border-radius:16px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px;line-height:1.5}.b.bot{background:rgba(255,255,255,.07);align-self:flex-start;border-bottom-left-radius:4px}.b.me{background:linear-gradient(135deg,var(--c),var(--m));color:#0b0d12;align-self:flex-end;border-bottom-right-radius:4px}
+.qr{display:flex;gap:8px;flex-wrap:wrap;padding:0 14px 10px}.qr button{border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);border-radius:99px;padding:6px 12px;font:500 13px "DM Sans",sans-serif;cursor:pointer}
+.ci{display:flex;gap:8px;padding:10px 14px;border-top:1px solid var(--line)}.ci input{flex:1;min-width:0}.ci .btn{padding:10px 18px}
+.cwa{text-align:center;padding:8px 14px 12px;font-size:13px;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+<header><div class="wrap">
+<a class="logo" href="#top" aria-label="Kolachi Printers home"><svg class="mark" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#fff"/><g style="mix-blend-mode:multiply"><circle cx="19" cy="20" r="13" fill="#00b7e8"/><circle cx="29" cy="20" r="13" fill="#ec008c"/><circle cx="24" cy="29" r="13" fill="#ffe600"/></g><path d="M24 2.5v3.5M24 42v3.5M2.5 24h3.5M42 24h3.5" stroke="#14171a" stroke-width="1.5" stroke-linecap="round"/></svg><span class="wm">Kolachi <span>Printers</span></span></a>
+<nav><a href="#templates">Templates</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap hero-g"><div>
+<h1>Pick a template. Make it yours. Print it.</h1>
+<p>Business cards, letterheads, flyers, and designs for YouTube, Facebook and TikTok. Change the name, colors and contact details in seconds, then download it or send it to Kolachi Printers to print.</p>
+<div class="row"><a class="btn" href="#templates">Browse templates</a><a class="btn alt" href="#pricing">See Pro plan</a></div>
+</div><div class="stack" id="stack" aria-hidden="true"></div></div></div>
+
+<section class="alt" id="templates"><div class="wrap">
+<h2>Templates</h2>
+<p class="sub">Ten styles each for business cards, YouTube banners, Facebook posts and TikTok logos, plus more print formats. 14 are free and Pro unlocks the rest.</p>
+<div class="tabs" id="chips" role="group" aria-label="Filter by platform"></div>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section id="editor"><div class="wrap">
+<h2>Remake your template</h2>
+<p class="sub">Type your details and watch the design change. Happy with it? Send it to us to print.</p>
+<div class="tabs" id="tabs" role="group" aria-label="Free templates"></div>
+<div class="editor">
+<div class="panel">
+<label>Business name<input type="text" id="f-name" value="Kolachi Traders"></label>
+<label>Tagline<input type="text" id="f-tag" value="Quality you can count on"></label>
+<label>Phone<input type="text" id="f-phone" value="+92 308 3958818"></label>
+<label>Email<input type="email" id="f-email" value="shafiqkolachi92@gmail.com"></label>
+<div><b style="font-size:14px">Accent color</b><div class="sw" id="sw" style="margin-top:8px"></div></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn" id="dlpng" type="button" hidden>Download PNG</button><button class="btn alt" id="dlsvg" type="button" hidden>Download SVG</button></div>
+<p id="dlmsg" role="status" style="margin:0;font-size:14px;color:var(--muted)"></p>
+<a class="btn alt" id="send" href="#" target="_blank" rel="noopener">Send to print on WhatsApp</a>
+</div>
+<div class="prev" id="prev"></div>
+</div>
+</div></section>
+
+<section class="alt" id="pricing"><div class="wrap">
+<h2>Free and Pro</h2>
+<p class="sub">Start free. Upgrade when you need more templates.</p>
+<div class="plans">
+<div class="plan"><h3>Free</h3><div class="price">$0</div>
+<ul><li>3 starter styles for every platform, plus the letterhead and flyer</li><li>Edit text, colors and contact details</li><li>Download as PNG or SVG</li><li>Send to print on WhatsApp</li></ul>
+<a class="btn alt" href="#editor">Start free</a></div>
+<div class="plan pro"><h3>Pro</h3><div class="price">$10 <small>per month</small></div>
+<ul><li>Everything in Free</li><li>All 45 templates, including the invoice, wedding card and shop banner</li><li>New templates added regularly</li><li>Priority help with your print order</li></ul>
+<button class="btn" id="paybtn" type="button">Pay with JazzCash</button></div>
+</div>
+<div class="pay" id="pay">
+<h3>Paying from Pakistan? Use JazzCash</h3>
+<ol><li>Open JazzCash and send the PKR equivalent of $10 to the number below.</li><li>Message us the transaction ID and the email you want Pro on, by WhatsApp or email.</li><li>We switch on Pro for your account.</li></ol>
+<div class="num"><span id="jc">03083958818</span><button class="btn alt" id="copy" type="button">Copy number</button></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Contact Kolachi Printers</h2>
+<p class="sub">Questions, custom jobs or bulk orders? Reach us directly.</p>
+<div class="contact">
+<div class="cc"><b>Phone (Pakistan)</b><a href="tel:+923083958818">+92 308 3958818</a><br><span style="color:var(--muted)">03083958818</span></div>
+<div class="cc"><b>WhatsApp</b><a href="https://wa.me/923083958818" target="_blank" rel="noopener">Message us</a></div>
+<div class="cc"><b>Email</b><a href="mailto:shafiqkolachi92@gmail.com">shafiqkolachi92@gmail.com</a></div>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Kolachi Printers. All rights reserved.</span><button class="btn alt" id="dllogo" type="button" hidden>Download logo</button></div></footer>
+
+<button class="chat-fab btn" id="cfab" type="button" aria-expanded="false" aria-controls="chat">Chat with us</button>
+<div class="chat" id="chat" role="dialog" aria-label="Kolachi Printers support chat">
+<div class="ch"><div><b>Kolachi Assistant</b><small>AI support</small></div><button class="x" id="cx" type="button" aria-label="Close chat">×</button></div>
+<div class="cm" id="cm" aria-live="polite"></div>
+<div class="qr" id="qr"></div>
+<div class="ci"><input type="text" id="cin" placeholder="Type your question" aria-label="Your message" autocomplete="off"><button class="btn" id="csend" type="button">Send</button></div>
+<a class="cwa" href="https://wa.me/923083958818" target="_blank" rel="noopener">Prefer a person? Message us on WhatsApp</a>
+</div>
+<dialog id="dlg"><h3>This template is Pro</h3><p>Pro is $10 per month and unlocks all 45 templates.</p>
+<div class="row"><a class="btn" href="#pricing" id="goPro">See Pro plan</a><button class="btn alt" type="button" id="close">Not now</button></div></dialog>
+
+<dialog id="paydlg"><h3>Get Pro for $10 per month</h3>
+<p>1. Open JazzCash and send the PKR equivalent of $10 to <b>03083958818</b>.</p>
+<div class="row" style="margin:12px 0"><button class="btn alt" id="copy2" type="button">Copy number</button><a class="btn" id="openjc" href="#">Open JazzCash</a></div>
+<p>2. After you pay, enter the transaction ID from your JazzCash receipt.</p>
+<label>Transaction ID<input type="text" id="txn" autocomplete="off"></label>
+<p id="paymsg" role="status" style="color:var(--muted);font-size:14px;min-height:1.4em"></p>
+<div class="row" style="flex-wrap:wrap"><button class="btn" id="paid" type="button">I’ve paid, unlock Pro</button><a class="btn alt" id="paywa" href="#" target="_blank" rel="noopener" hidden>Send ID on WhatsApp</a><button class="btn alt" id="payclose" type="button">Close</button></div></dialog>
+<script>
+var STY=[
+{n:'Classic',bg:'#ffffff',fg:'#14171a',sub:'#555555',ac:'A',deco:'bar',al:'l'},
+{n:'Midnight',bg:'#14171a',fg:'#ffffff',sub:'#cfd5d8',ac:'A',deco:'circles',al:'l'},
+{n:'Bold',bg:'A',fg:'#ffffff',sub:'#ffffff',ac:'#ffffff',deco:'diag',al:'l'},
+{n:'Neon',bg:'#120a24',fg:'#ffffff',sub:'#c7b9ff',ac:'#00e5ff',deco:'grid',al:'c'},
+{n:'Sunrise',bg:'#ffb703',fg:'#14171a',sub:'#3b2f00',ac:'#d62828',deco:'stripes',al:'l'},
+{n:'Forest',bg:'#12382a',fg:'#f2f7f3',sub:'#b9d4c4',ac:'#7bd389',deco:'dots',al:'c'},
+{n:'Minimal',bg:'#f5f5f5',fg:'#111111',sub:'#666666',ac:'#111111',deco:'frame',al:'c'},
+{n:'Ocean',bg:'#0a4d68',fg:'#ffffff',sub:'#bfe6f5',ac:'#05bfdb',deco:'waves',al:'l'},
+{n:'Candy',bg:'#ffd6e8',fg:'#4a1030',sub:'#7a3a58',ac:'A',deco:'blobs',al:'c'},
+{n:'Royal',bg:'#1a1033',fg:'#f6e7b4',sub:'#cdbf94',ac:'#d4af37',deco:'corner',al:'c'}];
+var KINDS={card:{l:'business card',p:'Print',w:700,h:400,size:'3.5 × 2 in'},fb:{l:'Facebook post',p:'Facebook',w:1200,h:630,size:'1200 × 630 px'},tt:{l:'TikTok logo',p:'TikTok',w:1000,h:1000,size:'1000 × 1000 px'},yt:{l:'YouTube banner',p:'YouTube',w:2560,h:1440,size:'2560 × 1440 px'}};
+var GEO={card:{ml:70,mw:580,yn:150,sn:58,yt:196,st:26,yp:312,sp:24,ye:348,se:24},fb:{ml:80,mw:1000,yn:270,sn:100,yt:345,st:38,yp:470,sp:36,ye:525,se:32},yt:{ml:520,mw:1400,yn:640,sn:190,yt:730,st:60,yp:850,sp:46,ye:905,se:40}};
+function mk(k){var K=KINDS[k];return STY.map(function(s,i){return{id:k+'-'+s.n.toLowerCase(),name:s.n+' '+K.l,p:K.p,free:i<3?1:0,w:K.w,h:K.h,size:K.size,k:k,s:s}})}
+var T=mk('card').concat([
+{id:'letter',name:'Letterhead',p:'Print',free:1,w:800,h:1040,size:'A4'},
+{id:'flyer',name:'Event flyer',p:'Print',free:1,w:700,h:980,size:'A5'},
+{id:'invoice',name:'Invoice',p:'Print',free:0,w:800,h:1040,size:'A4'},
+{id:'wedding',name:'Wedding card',p:'Print',free:0,w:700,h:980,size:'5 × 7 in'},
+{id:'banner',name:'Shop banner',p:'Print',free:0,w:1800,h:600,size:'6 × 2 ft'}],mk('fb'),mk('tt'),mk('yt'));
+var PL=['All','Print','YouTube','Facebook','TikTok'],flt='All';
+var COLORS=['#d6246e','#0097b8','#e8a700','#14171a','#2f8f4e'];
+var d={name:'Kolachi Traders',tag:'Quality you can count on',phone:'+92 308 3958818',email:'shafiqkolachi92@gmail.com',color:COLORS[0]};
+var cur=T[0];
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function fs(s,mw,b){return Math.round(Math.min(b,mw/(Math.max(String(s).length,1)*0.56)))}
+function tx(x,y,s,z,f,o){o=o||{};return '<text x="'+x+'" y="'+y+'" font-size="'+z+'" fill="'+f+'" font-weight="'+(o.w||400)+'"'+(o.a?' text-anchor="'+o.a+'"':'')+(o.i?' font-style="italic"':'')+(o.f?' font-family="'+o.f+'"':'')+'>'+esc(s)+'</text>'}
+function R(x,y,w,h,f,o){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+f+'"'+(o||'')+'/>'}
+function ini(s){var p=String(s).trim().split(/\s+/);return ((p[0]||'K')[0]+(p.length>1?p[1][0]:'')).toUpperCase()}
+function deco(k,w,h,c){
+  var o='',i,j,sw=Math.max(1,Math.round(h*.003)),r=Math.round;
+  function C(x,y,z,op){return '<circle cx="'+r(x)+'" cy="'+r(y)+'" r="'+r(z)+'" fill="'+c+'" opacity="'+op+'"/>'}
+  switch(k){
+  case 'bar':return R(0,0,r(w*.025),h,c);
+  case 'circles':return C(w*.88,h*.15,h*.5,.18)+C(w*.08,h,h*.35,.14);
+  case 'diag':return '<polygon points="'+[w*.62,0,w,0,w,h,w*.38,h].map(r).join(',')+'" fill="'+c+'" opacity=".16"/>';
+  case 'stripes':for(i=0;i<5;i++)o+='<line x1="'+r(w*(.62+i*.08))+'" y1="0" x2="'+r(w*(.5+i*.08))+'" y2="'+h+'" stroke="'+c+'" stroke-width="'+r(h*.03)+'" opacity=".4"/>';return o;
+  case 'grid':for(i=1;i<10;i++)o+='<line x1="0" y1="'+r(h*i/10)+'" x2="'+w+'" y2="'+r(h*i/10)+'" stroke="'+c+'" stroke-width="'+sw+'" opacity=".18"/>';for(i=1;i<r(w/h*10);i++)o+='<line x1="'+r(h*i/10)+'" y1="0" x2="'+r(h*i/10)+'" y2="'+h+'" stroke="'+c+'" stroke-width="'+sw+'" opacity=".18"/>';return o;
+  case 'dots':for(i=0;i<8;i++)for(j=0;j<5;j++)o+=C(w*(.6+i*.05),h*(.1+j*.08),h*.012,.45);return o;
+  case 'frame':return '<rect x="'+r(w*.03)+'" y="'+r(h*.05)+'" width="'+r(w*.94)+'" height="'+r(h*.9)+'" fill="none" stroke="'+c+'" stroke-width="'+Math.max(2,r(h*.006))+'"/>';
+  case 'waves':return '<path d="M0 '+r(h*.82)+' Q'+r(w*.25)+' '+r(h*.68)+' '+r(w*.5)+' '+r(h*.82)+' T'+w+' '+r(h*.82)+' V'+h+' H0Z" fill="'+c+'" opacity=".28"/><path d="M0 '+r(h*.9)+' Q'+r(w*.25)+' '+r(h*.78)+' '+r(w*.5)+' '+r(h*.9)+' T'+w+' '+r(h*.9)+' V'+h+' H0Z" fill="'+c+'" opacity=".35"/>';
+  case 'blobs':return C(w*.9,h*.18,h*.3,.5)+C(w*.05,h*.88,h*.22,.45)+C(w*.78,h*.92,h*.14,.45);
+  case 'corner':return '<polygon points="0,0 '+r(w*.16)+',0 0,'+r(h*.3)+'" fill="'+c+'"/><polygon points="'+w+','+h+' '+r(w*.84)+','+h+' '+w+','+r(h*.7)+'" fill="'+c+'"/>';
+  }
+  return '';
+}
+function sty(t,x,full){
+  var s=t.s,c=function(v){return v==='A'?x.color:v},bg=c(s.bg),fg=c(s.fg),sb=c(s.sub),ac=c(s.ac),w=t.w,h=t.h,n=x.name,b,i;
+  if(t.k==='tt'){
+    i=ini(n);
+    b='<circle cx="500" cy="500" r="480" fill="'+bg+'"/><circle cx="500" cy="500" r="480" fill="none" stroke="'+ac+'" stroke-width="16"/>';
+    if(s.deco==='frame')b+='<circle cx="500" cy="500" r="430" fill="none" stroke="'+ac+'" stroke-width="4"/>';
+    if(s.deco==='circles'||s.deco==='blobs'||s.deco==='dots')b+='<circle cx="800" cy="220" r="60" fill="'+ac+'" opacity=".5"/><circle cx="190" cy="800" r="40" fill="'+ac+'" opacity=".5"/>';
+    b+=tx(488,560,i,330,'#25f4ee',{a:'middle',w:800})+tx(512,572,i,330,'#fe2c55',{a:'middle',w:800})+tx(500,566,i,330,fg,{a:'middle',w:800})+tx(500,770,n,fs(n,640,64),fg,{a:'middle',w:700});
+  }else{
+    var G=GEO[t.k],l=s.al==='l',X=l?G.ml:w/2,A=l?undefined:'middle';
+    b=R(0,0,w,h,bg)+deco(s.deco,w,h,ac)+tx(X,G.yn,n,fs(n,G.mw,G.sn),fg,{w:800,a:A})+tx(X,G.yt,x.tag,G.st,sb,{a:A})+tx(X,G.yp,x.phone,G.sp,fg,{w:700,a:A})+tx(X,G.ye,x.email,G.se,sb,{a:A});
+  }
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+w+' '+h+'" '+(full?'width="'+w+'" height="'+h+'"':'style="aspect-ratio:'+w+'/'+h+'"')+' font-family="Arial, Helvetica, sans-serif">'+b+'</svg>';
+}
+function svgFor(t,x,full){
+  if(t.k)return sty(t,x,full);
+  var a=x.color,k='#14171a',n=x.name,g=x.tag,ph=x.phone,em=x.email,w=t.w,h=t.h,b='',i;
+  switch(t.id){
+  case 'card':b=R(0,0,w,h,'#fff')+R(0,0,30,h,a)+tx(65,150,n,fs(n,590,58),k,{w:800})+tx(65,196,g,26,'#555')+tx(65,312,ph,24,k)+tx(65,348,em,24,k);break;
+  case 'letter':b=R(0,0,w,h,'#fff')+R(0,0,w,170,a)+tx(50,100,n,fs(n,700,56),'#fff',{w:800})+tx(50,140,g,24,'#fff');[260,310,360,410,500,550].forEach(function(y,j){b+=R(50,y,j==3?420:700,10,'#e3e7e9')});b+=tx(50,960,ph,24,k)+tx(50,996,em,24,k);break;
+  case 'flyer':b=R(0,0,w,h,a)+'<circle cx="560" cy="170" r="190" fill="#fff" opacity=".13"/>'+tx(50,420,n,fs(n,600,96),'#fff',{w:800})+tx(50,490,g,34,'#fff')+tx(50,870,ph,30,'#fff',{w:700})+tx(50,915,em,26,'#fff');break;
+  case 'invoice':b=R(0,0,w,h,'#fff')+tx(50,140,'INVOICE',96,a,{w:800})+tx(50,200,n,fs(n,700,34),k,{w:700})+tx(50,236,g,22,'#555');[330,390,450,510,570,630].forEach(function(y){b+=R(50,y,700,8,'#e3e7e9')});b+=R(500,720,250,60,a)+tx(520,762,'Total',28,'#fff',{w:700})+tx(50,960,ph,24,k)+tx(50,996,em,24,k);break;
+  case 'wedding':b=R(0,0,w,h,'#fff')+'<rect x="30" y="30" width="640" height="920" fill="none" stroke="'+a+'" stroke-width="4"/><rect x="50" y="50" width="600" height="880" fill="none" stroke="'+a+'" stroke-width="1.5"/>'+tx(350,300,'You’re invited',30,a,{a:'middle',w:700})+tx(350,480,n,fs(n,540,70),k,{a:'middle',i:1,f:'Georgia, serif'})+tx(350,550,g,26,'#555',{a:'middle'})+tx(350,830,ph,26,k,{a:'middle'})+tx(350,872,em,24,k,{a:'middle'});break;
+  case 'banner':b=R(0,0,w,h,k)+R(0,h-40,w,40,a)+tx(80,290,n,fs(n,1100,130),'#fff',{w:800})+tx(80,380,g,48,'#cfd5d8')+tx(w-80,460,ph,40,'#fff',{a:'end',w:700})+tx(w-80,515,em,34,'#cfd5d8',{a:'end'});break;
+  case 'facebook':b=R(0,0,w,h,'#fff')+R(790,0,410,h,a)+'<circle cx="1000" cy="315" r="150" fill="#fff" opacity=".18"/>'+tx(70,270,n,fs(n,680,92),k,{w:800})+tx(70,340,g,36,'#555')+R(70,420,380,76,k,' rx="38"')+tx(260,470,ph,30,'#fff',{a:'middle',w:700})+tx(70,560,em,28,'#555');break;
+  case 'tiktok':i=ini(n);b='<circle cx="500" cy="500" r="480" fill="'+k+'"/><circle cx="500" cy="500" r="480" fill="none" stroke="'+a+'" stroke-width="14"/>'+tx(488,560,i,330,'#25f4ee',{a:'middle',w:800})+tx(512,572,i,330,'#fe2c55',{a:'middle',w:800})+tx(500,566,i,330,'#fff',{a:'middle',w:800})+tx(500,770,n,fs(n,640,64),'#fff',{a:'middle',w:700});break;
+  case 'youtube':b=R(0,0,w,h,k)+'<circle cx="260" cy="1200" r="520" fill="'+a+'" opacity=".25"/><circle cx="2350" cy="200" r="420" fill="'+a+'" opacity=".2"/>'+tx(1280,640,n,fs(n,1400,190),'#fff',{a:'middle',w:800})+tx(1280,730,g,60,'#cfd5d8',{a:'middle'})+R(1000,770,560,12,a)+tx(1280,850,ph,46,'#fff',{a:'middle',w:700})+tx(1280,905,em,40,'#cfd5d8',{a:'middle'});break;
+  }
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+w+' '+h+'" '+(full?'width="'+w+'" height="'+h+'"':'style="aspect-ratio:'+w+'/'+h+'"')+' font-family="Arial, Helvetica, sans-serif">'+b+'</svg>';
+}
+function pv(t,x){return '<div class="pv">'+svgFor(t,x)+'</div>'}
+function grid(){
+  var h='';
+  T.forEach(function(t){
+    if(flt!=='All'&&t.p!==flt)return;
+    h+='<div class="tc"><div class="stage">'+pv(t,d)+(ok(t)?'':'<div class="lock">Pro</div>')+'</div>'+
+    '<div class="meta"><div><h3>'+t.name+'</h3><small>'+t.size+'</small></div><span class="tag'+(t.free?'':' pro')+'">'+(t.free?'Free':'Pro')+'</span></div>'+
+    '<button class="btn'+(ok(t)?'':' alt')+'" type="button" data-id="'+t.id+'">'+(ok(t)?'Use this template':'Unlock with Pro')+'</button></div>';
+  });
+  document.getElementById('grid').innerHTML=h;
+}
+function tabs(){
+  var h='';T.forEach(function(t){if(ok(t)&&t.p===cur.p)h+='<button type="button" data-id="'+t.id+'" aria-pressed="'+(t===cur)+'">'+t.name+'</button>'});
+  document.getElementById('tabs').innerHTML=h;
+}
+function draw(){
+  document.getElementById('prev').innerHTML=pv(cur,d);
+  var m='Hello Kolachi Printers, I want to print a '+cur.name.toLowerCase()+'.\nName: '+d.name+'\nTagline: '+d.tag+'\nPhone: '+d.phone+'\nEmail: '+d.email;
+  document.getElementById('send').href='https://wa.me/923083958818?text='+encodeURIComponent(m);
+  grid();
+}
+function pick(id){
+  var t=T.filter(function(x){return x.id===id})[0];
+  if(!ok(t)){document.getElementById('dlg').showModal();return}
+  cur=t;tabs();draw();document.getElementById('editor').scrollIntoView();
+}
+document.getElementById('grid').addEventListener('click',function(e){var b=e.target.closest('button');if(b)pick(b.dataset.id)});
+document.getElementById('tabs').addEventListener('click',function(e){var b=e.target.closest('button');if(b){cur=T.filter(function(x){return x.id===b.dataset.id})[0];tabs();draw()}});
+[['f-name','name'],['f-tag','tag'],['f-phone','phone'],['f-email','email']].forEach(function(p){
+  document.getElementById(p[0]).addEventListener('input',function(e){d[p[1]]=e.target.value;draw()});
+});
+var sw=document.getElementById('sw');
+function swatches(){sw.innerHTML=COLORS.map(function(c){return '<button type="button" style="background:'+c+'" aria-label="Color '+c+'" aria-pressed="'+(c===d.color)+'" data-c="'+c+'"></button>'}).join('')}
+sw.addEventListener('click',function(e){var b=e.target.closest('button');if(b){d.color=b.dataset.c;swatches();draw()}});
+document.getElementById('close').onclick=function(){document.getElementById('dlg').close()};
+document.getElementById('goPro').onclick=function(){document.getElementById('dlg').close()};
+document.getElementById('copy').onclick=function(){
+  var b=this;
+  try{navigator.clipboard.writeText('03083958818').then(function(){b.textContent='Copied'},function(){b.textContent='Copy failed'})}catch(e){b.textContent='Copy failed'}
+};
+function chips(){document.getElementById('chips').innerHTML=PL.map(function(p){return '<button type="button" data-p="'+p+'" aria-pressed="'+(p===flt)+'">'+p+'</button>'}).join('')}
+document.getElementById('chips').addEventListener('click',function(e){var b=e.target.closest('button');if(b){flt=b.dataset.p;chips();grid()}});
+var dl=null,msg=document.getElementById('dlmsg'),bp=document.getElementById('dlpng'),bs=document.getElementById('dlsvg');
+try{(window.claude&&claude.use?claude.use('downloads'):Promise.resolve(null)).then(function(m){dl=m;if(m){bp.hidden=false;bs.hidden=false;document.getElementById('dllogo').hidden=false}}).catch(function(){})}catch(e){}
+function fn(ext){var s=String(d.name||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'design';return 'kolachi-'+cur.id+'-'+s+'.'+ext}
+function done(p){msg.textContent='';p.then(function(){msg.textContent='Saved.'}).catch(function(e){msg.textContent=e&&e.code==='declined'?'':'Could not save the file. Try again.'})}
+bs.onclick=function(){if(dl)done(dl.save({filename:fn('svg'),data:svgFor(cur,d,true)}))};
+bp.onclick=function(){
+  if(!dl)return;var img=new Image();
+  img.onload=function(){var sc=Math.max(1,Math.ceil(1600/cur.w)),c=document.createElement('canvas');c.width=cur.w*sc;c.height=cur.h*sc;c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+    c.toBlob(function(bl){if(bl)done(dl.save({filename:fn('png'),data:bl}));else msg.textContent='Could not make the PNG.'},'image/png')};
+  img.onerror=function(){msg.textContent='Could not make the PNG.'};
+  img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svgFor(cur,d,true));
+};
+var pro=false;try{pro=!!localStorage.getItem('kp_pro')}catch(e){}
+function ok(t){return t.free||pro}
+var JC='https://play.google.com/store/apps/details?id=com.techlogix.mobilinkcustomer';
+var JCI='intent://#Intent;package=com.techlogix.mobilinkcustomer;S.browser_fallback_url='+encodeURIComponent(JC)+';end';
+var isA=/Android/i.test(navigator.userAgent);
+var pd=document.getElementById('paydlg'),pb=document.getElementById('paybtn'),pm=document.getElementById('paymsg'),oj=document.getElementById('openjc'),pw=document.getElementById('paywa');
+function proUI(){pb.textContent=pro?'Pro is active on this device':'Pay with JazzCash';pb.disabled=pro}
+if(isA){oj.href=JCI;oj.target='_blank'}
+oj.onclick=function(e){if(!isA){e.preventDefault();pm.textContent='Open the JazzCash app on your phone, then send the money.'}};
+pb.onclick=function(){pm.textContent='';pd.showModal();if(isA){try{window.open(JCI,'_blank')}catch(e){}}};
+document.getElementById('payclose').onclick=function(){pd.close()};
+document.getElementById('copy2').onclick=function(){var b=this;try{navigator.clipboard.writeText('03083958818').then(function(){b.textContent='Copied'},function(){b.textContent='Copy failed'})}catch(e){b.textContent='Copy failed'}};
+document.getElementById('paid').onclick=function(){
+  var v=document.getElementById('txn').value.trim();
+  if(v.length<6){pm.textContent='Enter the transaction ID from your JazzCash receipt.';return}
+  pro=true;try{localStorage.setItem('kp_pro',JSON.stringify({txn:v,t:Date.now()}))}catch(e){}
+  proUI();tabs();grid();
+  pm.textContent='Pro is unlocked on this device. Please also send us the ID so we can check it.';
+  pw.hidden=false;pw.href='https://wa.me/923083958818?text='+encodeURIComponent('Hello Kolachi Printers, I paid for Pro on JazzCash. Transaction ID: '+v);
+};
+proUI();
+var H={name:'Kolachi Printers',tag:'Print. Design. Delivered.',phone:'+92 308 3958818',email:'shafiqkolachi92@gmail.com',color:'#ff3d8b'};
+function byId(i){return T.filter(function(t){return t.id===i})[0]}
+document.getElementById('stack').innerHTML=['yt-neon','fb-bold','tt-royal'].map(function(i){return pv(byId(i),H)}).join('');
+var LOGO='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="512" height="512"><rect width="48" height="48" rx="12" fill="#fff"/><g style="mix-blend-mode:multiply"><circle cx="19" cy="20" r="13" fill="#00b7e8"/><circle cx="29" cy="20" r="13" fill="#ec008c"/><circle cx="24" cy="29" r="13" fill="#ffe600"/></g><path d="M24 2.5v3.5M24 42v3.5M2.5 24h3.5M42 24h3.5" stroke="#14171a" stroke-width="1.5" stroke-linecap="round"/></svg>';
+document.getElementById('dllogo').onclick=function(){if(dl)done(dl.save({filename:'kolachi-printers-logo.svg',data:LOGO}))};
+var smp=null,turns=[],cbusy=false,cctl=null,greeted=false;
+try{(window.claude&&claude.use?claude.use('sample'):Promise.resolve(null)).then(function(f){smp=f}).catch(function(){})}catch(e){}
+var RULES=['You are the support assistant for Kolachi Printers, a website where customers pick, edit and download print and social media templates.',
+'Reply in the customer\u2019s language (English, Urdu or Roman Urdu). Be friendly and short (under 80 words). Plain text only, no markdown.',
+'Facts you may use:',
+'- 45 templates across Print, YouTube banner, Facebook post and TikTok logo. Each platform has 10 styles. Print also has letterhead, flyer, invoice, wedding card and shop banner.',
+'- 14 templates are free: 3 business card styles, the letterhead and flyer, and 3 styles each for YouTube, Facebook and TikTok. Pro unlocks all 45.',
+'- Customers edit the name, tagline, phone, email and accent color, then download a PNG or SVG, or send the design to us on WhatsApp to print.',
+'- Pro costs $10 per month. In Pakistan, pay by JazzCash: send the PKR equivalent of $10 to 03083958818, then enter the transaction ID on the site and tap "I\u2019ve paid, unlock Pro". We check the transaction ID afterwards. Pro unlocks on that device.',
+'- Contact: phone +92 308 3958818 (03083958818), same number on WhatsApp, email shafiqkolachi92@gmail.com.',
+'Rules: never invent printing prices, delivery times, a shop address or discounts; for those say the team will confirm and give the WhatsApp number or email. Never ask for card numbers, a JazzCash PIN or passwords. If asked, say you are an AI assistant.',
+'The customer conversation follows.'].join('\n');
+var cm=document.getElementById('cm'),cin=document.getElementById('cin'),cs=document.getElementById('csend'),chat=document.getElementById('chat'),cfab=document.getElementById('cfab'),qr=document.getElementById('qr');
+function cadd(cls,t){var e=document.createElement('div');e.className='b '+cls;e.textContent=t;cm.appendChild(e);cm.scrollTop=cm.scrollHeight;return e}
+function toggleChat(o){chat.classList.toggle('open',o);cfab.setAttribute('aria-expanded',o);cfab.textContent=o?'Close chat':'Chat with us';
+  if(o){if(!greeted){greeted=true;cadd('bot','Hi! I\u2019m the Kolachi Printers assistant. Ask me about templates, Pro, payment or printing.');
+    ['How much is Pro?','How do I pay with JazzCash?','Which templates are free?','I need a custom print job'].forEach(function(q){var b=document.createElement('button');b.type='button';b.textContent=q;b.onclick=function(){csend(q)};qr.appendChild(b)})}
+    cin.focus()}}
+cfab.onclick=function(){toggleChat(!chat.classList.contains('open'))};
+document.getElementById('cx').onclick=function(){toggleChat(false)};
+function cfin(){cbusy=false;cctl=null;cs.textContent='Send'}
+function csend(text){
+  text=String(text||'').trim();if(!text||cbusy)return;
+  qr.innerHTML='';cadd('me',text);cin.value='';
+  if(!smp){cadd('bot','Chat is not available here. Please message us on WhatsApp at +92 308 3958818 or email shafiqkolachi92@gmail.com.');return}
+  turns.push({role:'user',content:text});cbusy=true;cs.textContent='Stop';
+  var bub=cadd('bot','Thinking...');cctl=new AbortController();
+  smp([{role:'user',content:RULES}].concat(turns.slice(-11)),{cache:false,modelTier:'quick',signal:cctl.signal,onText:function(o){bub.textContent=o.text;cm.scrollTop=cm.scrollHeight}})
+  .then(function(r){bub.textContent=r.text;turns.push({role:'assistant',content:r.text})})
+  .catch(function(e){
+    turns.pop();var c=e&&e.code,m;
+    if(c==='cancelled')m=(e.text||'')||'Stopped.';
+    else if(c==='not_granted'||c==='sampling_disabled'||c==='capability_disabled'||c==='capability_removed'||c==='not_declared'){smp=null;m='Chat needs permission to use Claude. You can reach us on WhatsApp at +92 308 3958818.'}
+    else if(c==='rate_limited')m='Too many messages right now. Please wait a moment and try again.';
+    else if(c==='session_expired')m='Please sign in to Claude again, or message us on WhatsApp at +92 308 3958818.';
+    else m='Something went wrong. Please try again, or message us on WhatsApp at +92 308 3958818.';
+    bub.textContent=m})
+  .then(cfin);
+}
+cs.onclick=function(){if(cbusy){if(cctl)cctl.abort()}else csend(cin.value)};
+cin.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();if(!cbusy)csend(cin.value)}});
+swatches();tabs();chips();draw();
+</script>
+</body>
+</html>
